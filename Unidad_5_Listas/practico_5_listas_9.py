@@ -11,6 +11,7 @@ columna = 0
 jugador_1=True     #Variable para intercambiar turnos entre ambos players
 jugador_1_win = False
 jugador_2_win = False
+empate = 0
 
 while True:
     #Analizo si algún player gano
@@ -39,7 +40,10 @@ while True:
         jugador_2_win = True
     if ta_te_ti[2][0] == ta_te_ti[1][1] == ta_te_ti[0][2] == "O":
         jugador_2_win = True
-
+    #Chequeo de empate, si se jugaron todos los turnos y nadie gano
+    if empate == 9 and not jugador_1_win and not jugador_2_win:
+        print("\nEl juego termino en empate.")
+        break
 
     #Muestro mensaje y salgo del bucle 
     if jugador_1_win:
@@ -67,7 +71,7 @@ while True:
         
         for planilla in ta_te_ti:
             print(planilla)
-        
+        empate += 1
         jugador_1 = False
     elif not jugador_1:
         print("--------Turno del jugador 2 (O)----------\n")
@@ -87,6 +91,7 @@ while True:
 
         for planilla in ta_te_ti:
             print(planilla)
+        empate += 1
         jugador_1 = True
 
         for tateti in ta_te_ti:

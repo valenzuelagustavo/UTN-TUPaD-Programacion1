@@ -4,7 +4,7 @@
 puntajes = [450, 1200, 875, 990, 300, 1500, 640]
 
 #Función Bubble_sort vista en clase
-def bubble_sot_mejorado(lista):
+def bubble_sort_mejorado(lista):
     n = len(lista)
     for i in range(n):
         intercambio = False
@@ -24,7 +24,7 @@ for puntos in puntajes:
     if puntos < mas_bajo: mas_bajo = puntos
 
 #Llamado a la función para ordenar la lista
-bubble_sot_mejorado(puntajes)
+bubble_sort_mejorado(puntajes)
 
 #Mostramos los datos que pide la consigna.
 print("RANKING de PUNTAJES:")

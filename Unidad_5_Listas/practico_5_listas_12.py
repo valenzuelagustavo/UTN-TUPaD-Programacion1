@@ -15,9 +15,9 @@ while len(numeros_enteros) != 8:
 #Asignamos la lista ordenada 
 lista_ordenada = sorted(numeros_enteros)
 #Hacemos que la lista se ponga en reversa
-numeros_enteros.reverse()
+lista_en_reversa = sorted(numeros_enteros, reverse=True)
 
 #Imprimimos los resultados
 print(f"La lista ordenada: {lista_ordenada}")
-print(f"La lista en reversa: {numeros_enteros}")
+print(f"La lista en reversa: {lista_en_reversa}")
 
