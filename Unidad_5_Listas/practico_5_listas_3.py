@@ -13,10 +13,8 @@ for numeros in range(15):
 print(f"La lista de números aleatorios es: {lista_numeros}")
 #Recorro la lista y añado a las listad de impares o pares según corresponda
 for i in range(len(lista_numeros)):
-    if lista_numeros[i] % 2 == 0:
-        num_pares.append(i)
-    elif lista_numeros[i] % 2 != 0:
-        num_impares.append(i)
+    if lista_numeros[i] % 2 == 0: num_pares.append(i)   #Añadimos los pares
+    elif lista_numeros[i] % 2 != 0: num_impares.append(i)    #Añadimos los impares
 #Informo la cantidad de pares e impares
 print(f"La lista de números impares tiene {len(num_impares)} números. La lista de números pares tiene {len(num_pares)} números.")
 
