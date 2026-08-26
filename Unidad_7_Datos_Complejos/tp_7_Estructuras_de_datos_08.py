@@ -12,27 +12,32 @@ libros = {
     "El padrino": 1,
 }
 
+### Programa ###
+
 while True:
     print("Consulte el stock del libro.")
 
-    consulta = input("Ingrese el título del libro: ").strip()
+    consulta = input("Ingrese el título del libro (0 para salir): ").strip()
+
+    if consulta == "0":
+        print("Gracias por utilizar nuestro sistema.")
+        break
 
     if consulta in libros:
-        print("El libro se encuentra en nuestro inventario.")
+        print(f"El libro ingresado se encuentra en stock.\nTiene {libros[consulta]} unidades.")
+        agrega_stock = input("Digite la cantidad de unidades a agregar: ").strip()
+
+        while not agrega_stock.isdigit():
+            print("Dato invalido. La cantidad a agregar debe ser un número.")
+            agrega_stock = input("Digite la cantidad de unidades a agregar: ").strip()
+
+        libros[consulta] += int(agrega_stock)
+        print("Cantidad agregada.")
+
     else:
-        print("El libro no se encuentra en nuestro catalogo.")
+        libros.update({consulta: 0})
+        print("El libro no se encontraba en sistema. Ya ha sido agregado.")
 
-    opcion = input("¿Quiere agregar stock [1] o agregar un producto [2]?\nElija la opción: ")
-
-    while opcion not in ["1", "2"]:
-        print("Opción invalida.")
-        opcion = input("¿Quiere agregar stock [1] o agregar un producto [2]?\nElija la opción: ")
-
-    if opcion == "2":
-        nuevo_producto = input("Ingrese el título del nuevo libro: ")
-        cantidad_libro = input("Ingrese la cantidad de unidades: ")
-
-        libros.update({nuevo_producto: cantidad_libro})
-
+     
 
 

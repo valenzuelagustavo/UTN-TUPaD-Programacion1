@@ -6,7 +6,10 @@ palabras_unicas = set(frase_usuario)
 
 cuenta_palabras = {}
 
-for i, palabra in enumerate(frase_usuario, start=1):
+#for i, palabra in enumerate(frase_usuario, start=1):
+#    cuenta_palabras[palabra] = cuenta_palabras.get(palabra, 0) + 1
+
+for palabra in frase_usuario:
     cuenta_palabras[palabra] = cuenta_palabras.get(palabra, 0) + 1
 
 print(f"Las palabras únicas: {palabras_unicas}")

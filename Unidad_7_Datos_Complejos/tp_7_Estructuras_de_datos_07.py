@@ -7,14 +7,14 @@ asistencia_set = set(asistencias)
 repeticiones = {}
 
 print("Lista de asistencia completa\n---------------------------")
-for n in range(len(asistencias)):
-    print(f"\t{asistencias[n]}")
+for alumno in asistencias:
+    print(f"\t{alumno}")
 
 print(f"\nAlumnos que asistieron: ")
 print(*asistencia_set)
 
 print("\nCantidad de veces que \nasistio cada alumno: ")
-for i, alumno in enumerate(asistencias):
+for alumno in asistencias:
     repeticiones[alumno] = repeticiones.get(alumno, 0) + 1
 for alumno, cantidad in repeticiones.items():
     print(f"\t{alumno}: {cantidad}")
