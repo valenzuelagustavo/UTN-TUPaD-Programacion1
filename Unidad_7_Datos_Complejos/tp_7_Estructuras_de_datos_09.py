@@ -1,4 +1,5 @@
 ### Ejercicio 9 ###
+"""Organizador personal de eventos diarios que almacena actividades asociadas a un día y horario específico, permitiendo consultas exactas."""
 
 agenda = {
     ("lunes", "10:00"): "Consultas integrador",
@@ -15,7 +16,10 @@ agenda = {
 print("Organizador personal de eventos diarios (A.K.A. Agenda)")
 
 consulta_dia = input("Ingrese el día por el que quiere consultar: ").strip().lower()
-consulta_hora = input("Ingrese la hora: ").strip()
-
-for consulta_dia, consulta_hora in agenda.items():
-    print(f"Actividad: {agenda.values}")
+consulta_hora = input("Ingrese la hora (HH:MM): ").strip()
+dia_hora = (consulta_dia, consulta_hora)
+actividad = agenda.get(dia_hora)
+if actividad:
+    print(f"Actividad: {actividad}")
+else:
+    print("El día y hora no tienen actividades.")

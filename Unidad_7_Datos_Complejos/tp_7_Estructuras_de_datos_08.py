@@ -1,4 +1,5 @@
 ### Ejercicio 8 ###
+"""Sistema de gestión de inventario que permite consultar el stock de productos, reponer unidades y dar de alta nuevos artículos."""
 
 libros = {
     "El principito": 2,
@@ -35,6 +36,7 @@ while True:
         print("Cantidad agregada.")
 
     else:
+        # Se inicializa el stock en 0 por defecto hasta que el área de depósito confirme el ingreso físico
         libros.update({consulta: 0})
         print("El libro no se encontraba en sistema. Ya ha sido agregado.")
 

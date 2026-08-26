@@ -1,4 +1,5 @@
 ### Ejercicio 7 ###
+"""Script de análisis de asistencias que procesa un registro diario para obtener la lista de empleados presentes y la cantidad de jornadas a las que asistió cada uno."""
 
 asistencias = ["Ana","Luis","Ana","María", "Luis", "Pedro", "Ana"]
 

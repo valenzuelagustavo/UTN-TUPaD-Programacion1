@@ -1,4 +1,5 @@
 ### Ejercicio 2 ###
+"""Script que actualiza los precios de frutas específicas dentro de un catálogo existente."""
 
 precios_frutas = {
     'Banana': 1200,
@@ -7,12 +8,6 @@ precios_frutas = {
     'Uva': 1450
     }
 
-#Se añaden nuevos pares clave/valor al diccionario
 precios_frutas.update({'Naranja': 1200, 'Manzana': 1500, 'Pera': 2300})
 
-
-#Se hace un update del precio
 precios_frutas.update({'Banana': 1330, 'Manzana': 1700, 'Melón': 2800})
-
-
-
