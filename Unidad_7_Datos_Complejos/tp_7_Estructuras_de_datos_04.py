@@ -1,4 +1,5 @@
 ### Ejercicio 4 ###
+"""Sistema interactivo de agenda telefónica que permite registrar contactos y consultar números guardados."""
 
 contactos = {}
 
